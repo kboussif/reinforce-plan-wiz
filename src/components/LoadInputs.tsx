@@ -21,13 +21,13 @@ export const LoadInputs = ({ loads, elementType, onChange }: LoadInputsProps) =>
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-foreground">Design Loads (Ultimate Limit State)</CardTitle>
+        <CardTitle className="text-foreground">الأحمال / Charges de Calcul (ELU)</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="axial-force">
-              {elementType === 'column' ? 'Axial Force NEd (kN)' : 'Vertical Load (kN)'}
+              {elementType === 'column' ? 'القوة المحورية / Effort Normal NEd (kN)' : 'الحمولة العمودية / Charge Verticale (kN)'}
             </Label>
             <Input
               id="axial-force"
@@ -42,7 +42,7 @@ export const LoadInputs = ({ loads, elementType, onChange }: LoadInputsProps) =>
           {elementType === 'column' && (
             <>
               <div className="space-y-2">
-                <Label htmlFor="moment-x">Moment MEd,x (kNm)</Label>
+                <Label htmlFor="moment-x">العزم / Moment MEd,x (kNm)</Label>
                 <Input
                   id="moment-x"
                   type="number"
@@ -54,7 +54,7 @@ export const LoadInputs = ({ loads, elementType, onChange }: LoadInputsProps) =>
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="moment-y">Moment MEd,y (kNm)</Label>
+                <Label htmlFor="moment-y">العزم / Moment MEd,y (kNm)</Label>
                 <Input
                   id="moment-y"
                   type="number"
@@ -66,7 +66,7 @@ export const LoadInputs = ({ loads, elementType, onChange }: LoadInputsProps) =>
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="shear-x">Shear VEd,x (kN)</Label>
+                <Label htmlFor="shear-x">القص / Effort Tranchant VEd,x (kN)</Label>
                 <Input
                   id="shear-x"
                   type="number"
@@ -78,7 +78,7 @@ export const LoadInputs = ({ loads, elementType, onChange }: LoadInputsProps) =>
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="shear-y">Shear VEd,y (kN)</Label>
+                <Label htmlFor="shear-y">القص / Effort Tranchant VEd,y (kN)</Label>
                 <Input
                   id="shear-y"
                   type="number"
@@ -93,13 +93,13 @@ export const LoadInputs = ({ loads, elementType, onChange }: LoadInputsProps) =>
         </div>
         
         <div className="text-sm text-muted-foreground">
-          <p className="font-medium">Load Information:</p>
-          <p>• Enter ultimate design loads (factored loads)</p>
-          <p>• Positive axial force = compression</p>
+          <p className="font-medium">معلومات الأحمال / Info Charges:</p>
+          <p>• أدخل أحمال التصميم النهائية (معاملة) / Entrer charges de calcul ultimes</p>
+          <p>• القوة المحورية الموجبة = ضغط / Effort normal positif = compression</p>
           {elementType === 'column' && (
             <>
-              <p>• Moments about local axes of the element</p>
-              <p>• Shear forces in local coordinate system</p>
+              <p>• العزوم حول المحاور المحلية / Moments selon axes locaux</p>
+              <p>• قوى القص في النظام المحلي / Efforts tranchants en repère local</p>
             </>
           )}
         </div>

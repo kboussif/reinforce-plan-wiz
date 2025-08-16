@@ -49,17 +49,17 @@ export const ReinforcementInputs = ({
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-foreground">Reinforcement</CardTitle>
+        <CardTitle className="text-foreground">التسليح / Armatures</CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         {/* Longitudinal Reinforcement */}
         <div className="space-y-4">
           <h4 className="font-medium text-foreground">
-            {elementType === 'column' ? 'Longitudinal Bars' : 'Main Reinforcement'}
+            {elementType === 'column' ? 'الحديد الطولي / Armatures Longitudinales' : 'التسليح الرئيسي / Armatures Principales'}
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="bar-number">Number of Bars</Label>
+              <Label htmlFor="bar-number">عدد الأسياخ / Nombre Barres</Label>
               <Input
                 id="bar-number"
                 type="number"
@@ -71,7 +71,7 @@ export const ReinforcementInputs = ({
             </div>
             
             <div className="space-y-2">
-              <Label>Bar Diameter (mm)</Label>
+              <Label>قطر السيخ / Diamètre (mm)</Label>
               <Select
                 value={reinforcement.longitudinalBars.diameter.toString()}
                 onValueChange={(value) => handleLongitudinalChange('diameter', value)}
@@ -94,11 +94,11 @@ export const ReinforcementInputs = ({
         {/* Stirrups/Transverse Reinforcement */}
         <div className="space-y-4">
           <h4 className="font-medium text-foreground">
-            {elementType === 'column' ? 'Stirrups' : 'Distribution Bars'}
+            {elementType === 'column' ? 'الكانات / Cadres' : 'الحديد التوزيعي / Armatures Répartition'}
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="space-y-2">
-              <Label>Diameter (mm)</Label>
+              <Label>القطر / Diamètre (mm)</Label>
               <Select
                 value={reinforcement.stirrups.diameter.toString()}
                 onValueChange={(value) => handleStirrrupsChange('diameter', value)}
@@ -117,7 +117,7 @@ export const ReinforcementInputs = ({
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="stirrup-spacing">Spacing (mm)</Label>
+              <Label htmlFor="stirrup-spacing">التباعد / Espacement (mm)</Label>
               <Input
                 id="stirrup-spacing"
                 type="number"
@@ -130,7 +130,7 @@ export const ReinforcementInputs = ({
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="stirrup-legs">Number of Legs</Label>
+              <Label htmlFor="stirrup-legs">عدد الأرجل / Nombre Brins</Label>
               <Input
                 id="stirrup-legs"
                 type="number"
@@ -146,10 +146,10 @@ export const ReinforcementInputs = ({
 
         {/* Cover */}
         <div className="space-y-4">
-          <h4 className="font-medium text-foreground">Cover</h4>
+          <h4 className="font-medium text-foreground">الغطاء / Enrobage</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="cover">Concrete Cover (mm)</Label>
+              <Label htmlFor="cover">غطاء الخرسانة / Enrobage Béton (mm)</Label>
               <Input
                 id="cover"
                 type="number"
@@ -164,7 +164,7 @@ export const ReinforcementInputs = ({
 
         {/* Summary */}
         <div className="p-3 bg-muted rounded-lg text-sm">
-          <h4 className="font-medium text-foreground mb-2">Reinforcement Summary</h4>
+          <h4 className="font-medium text-foreground mb-2">ملخص التسليح / Résumé Armatures</h4>
           <p className="text-muted-foreground">
             {reinforcement.longitudinalBars.number}⌀{reinforcement.longitudinalBars.diameter} + 
             ⌀{reinforcement.stirrups.diameter} stirrups @ {reinforcement.stirrups.spacing}mm c/c

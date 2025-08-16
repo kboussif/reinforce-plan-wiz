@@ -21,12 +21,12 @@ export const GeometryInputs = ({ geometry, elementType, onChange }: GeometryInpu
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-foreground">Geometry</CardTitle>
+        <CardTitle className="text-foreground">الأبعاد / Géométrie</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="space-y-2">
-            <Label htmlFor="width">Width (m)</Label>
+            <Label htmlFor="width">العرض / Largeur (m)</Label>
             <Input
               id="width"
               type="number"
@@ -40,7 +40,7 @@ export const GeometryInputs = ({ geometry, elementType, onChange }: GeometryInpu
           
           <div className="space-y-2">
             <Label htmlFor="depth">
-              {elementType === 'column' ? 'Depth (m)' : 'Length (m)'}
+              {elementType === 'column' ? 'العمق / Profondeur (m)' : 'الطول / Longueur (m)'}
             </Label>
             <Input
               id="depth"
@@ -55,7 +55,7 @@ export const GeometryInputs = ({ geometry, elementType, onChange }: GeometryInpu
           
           <div className="space-y-2">
             <Label htmlFor="height">
-              {elementType === 'column' ? 'Height (m)' : 'Thickness (m)'}
+              {elementType === 'column' ? 'الارتفاع / Hauteur (m)' : 'السماكة / Épaisseur (m)'}
             </Label>
             <Input
               id="height"
@@ -70,8 +70,8 @@ export const GeometryInputs = ({ geometry, elementType, onChange }: GeometryInpu
         </div>
         
         <div className="text-sm text-muted-foreground">
-          <p className="font-medium">Cross-sectional area: {(geometry.width * geometry.depth).toFixed(3)} m²</p>
-          <p className="font-medium">Volume: {(geometry.width * geometry.depth * geometry.height).toFixed(3)} m³</p>
+          <p className="font-medium">المساحة المقطعية / Section: {(geometry.width * geometry.depth).toFixed(3)} m²</p>
+          <p className="font-medium">الحجم / Volume: {(geometry.width * geometry.depth * geometry.height).toFixed(3)} m³</p>
         </div>
       </CardContent>
     </Card>

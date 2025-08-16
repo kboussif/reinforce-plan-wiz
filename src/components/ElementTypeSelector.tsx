@@ -12,7 +12,7 @@ export const ElementTypeSelector = ({ elementType, onChange }: ElementTypeSelect
   return (
     <Card>
       <CardContent className="p-6">
-        <h2 className="text-xl font-bold text-foreground mb-4">Select Element Type</h2>
+        <h2 className="text-xl font-bold text-foreground mb-4">نوع العنصر / Type d'élément</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Button
             variant={elementType === 'column' ? 'default' : 'outline'}
@@ -20,8 +20,8 @@ export const ElementTypeSelector = ({ elementType, onChange }: ElementTypeSelect
             className="h-24 flex flex-col items-center justify-center gap-2"
           >
             <Building className="w-8 h-8" />
-            <span className="text-lg font-medium">Column</span>
-            <span className="text-sm opacity-75">Vertical structural element</span>
+            <span className="text-lg font-medium">عمود / Poteau</span>
+            <span className="text-sm opacity-75">Élément structurel vertical</span>
           </Button>
           
           <Button
@@ -30,8 +30,8 @@ export const ElementTypeSelector = ({ elementType, onChange }: ElementTypeSelect
             className="h-24 flex flex-col items-center justify-center gap-2"
           >
             <Layers className="w-8 h-8" />
-            <span className="text-lg font-medium">Footing</span>
-            <span className="text-sm opacity-75">Foundation element</span>
+            <span className="text-lg font-medium">أساس / Semelle</span>
+            <span className="text-sm opacity-75">Élément de fondation</span>
           </Button>
         </div>
       </CardContent>

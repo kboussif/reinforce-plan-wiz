@@ -142,12 +142,12 @@ const Index = () => {
             <div className="flex items-center gap-3">
               <Calculator className="w-8 h-8" />
               <div>
-                <h1 className="text-2xl md:text-3xl font-bold">Reinforced Concrete Calculator</h1>
-                <p className="text-primary-foreground/80">Professional tool for RC design according to Eurocode 2</p>
+                <h1 className="text-2xl md:text-3xl font-bold">حاسبة الخرسانة المسلحة / Calcul Béton Armé</h1>
+                <p className="text-primary-foreground/80">Outil professionnel pour la conception BA selon l'Eurocode 2</p>
               </div>
             </div>
             <div className="text-right">
-              <p className="text-sm opacity-90">Eurocode 2 Compliant</p>
+              <p className="text-sm opacity-90">Conforme Eurocode 2</p>
               <p className="text-xs opacity-75">EN 1992-1-1</p>
             </div>
           </div>
@@ -195,7 +195,7 @@ const Index = () => {
                     className="w-full sm:w-auto"
                   >
                     <Calculator className="w-5 h-5 mr-2" />
-                    Calculate Reinforcement
+                    حساب التسليح / Calculer
                   </Button>
                   
                   {results && (
@@ -206,7 +206,7 @@ const Index = () => {
                       className="w-full sm:w-auto"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Export Report
+                      تصدير التقرير / Exporter
                     </Button>
                   )}
                 </div>
@@ -233,9 +233,9 @@ const Index = () => {
               <Card>
                 <CardContent className="p-8 text-center">
                   <FileText className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-                  <h3 className="text-lg font-medium text-foreground mb-2">Ready to Calculate</h3>
+                  <h3 className="text-lg font-medium text-foreground mb-2">جاهز للحساب / Prêt à calculer</h3>
                   <p className="text-muted-foreground">
-                    Enter your design parameters and click "Calculate Reinforcement" to see results.
+                    أدخل معاملات التصميم واضغط على "حساب التسليح" لرؤية النتائج
                   </p>
                 </CardContent>
               </Card>
@@ -248,9 +248,9 @@ const Index = () => {
       <footer className="border-t mt-16 py-8 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center text-sm text-muted-foreground">
-            <p className="mb-2">Reinforced Concrete Calculator - Professional Engineering Tool</p>
-            <p>Based on Eurocode 2 (EN 1992-1-1) • For preliminary design purposes only</p>
-            <p className="mt-2 text-xs">Always verify results with professional structural analysis software</p>
+            <p className="mb-2">حاسبة الخرسانة المسلحة - أداة هندسية مهنية / Calcul Béton Armé</p>
+            <p>Basé sur Eurocode 2 (EN 1992-1-1) • Pour avant-projet uniquement</p>
+            <p className="mt-2 text-xs">Toujours vérifier les résultats avec un logiciel d'analyse structurale professionnel</p>
           </div>
         </div>
       </footer>

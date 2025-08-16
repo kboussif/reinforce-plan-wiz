@@ -20,12 +20,12 @@ export const MaterialInputs = ({
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-foreground">Materials</CardTitle>
+        <CardTitle className="text-foreground">المواد / Matériaux</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
-            <Label>Concrete Class</Label>
+            <Label>فئة الخرسانة / Classe Béton</Label>
             <Select
               value={concreteClass.name}
               onValueChange={(value) => {
@@ -47,7 +47,7 @@ export const MaterialInputs = ({
           </div>
           
           <div className="space-y-2">
-            <Label>Steel Grade</Label>
+            <Label>درجة الحديد / Nuance Acier</Label>
             <Select
               value={steelGrade.name}
               onValueChange={(value) => {
@@ -71,14 +71,14 @@ export const MaterialInputs = ({
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-muted-foreground">
           <div className="p-3 bg-muted rounded-lg">
-            <h4 className="font-medium text-foreground mb-2">Concrete Properties</h4>
+            <h4 className="font-medium text-foreground mb-2">خصائص الخرسانة / Propriétés Béton</h4>
             <p>fck = {concreteClass.fck} MPa</p>
             <p>fcd = {concreteClass.fcd} MPa</p>
             <p>Density = {concreteClass.density} kg/m³</p>
           </div>
           
           <div className="p-3 bg-muted rounded-lg">
-            <h4 className="font-medium text-foreground mb-2">Steel Properties</h4>
+            <h4 className="font-medium text-foreground mb-2">خصائص الحديد / Propriétés Acier</h4>
             <p>fyk = {steelGrade.fyk} MPa</p>
             <p>fyd = {steelGrade.fyd} MPa</p>
             <p>Density = {steelGrade.density} kg/m³</p>
